@@ -2962,45 +2962,46 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
         return TextSpan(style: widget.style, text: text);
       }
     }
-
-    // if (_value.composing.isValid && !widget.readOnly) {
-    //   final TextStyle composingStyle = widget.style.merge(
-    //     const TextStyle(decoration: TextDecoration.underline),
-    //   );
-    //   final String beforeText = _value.composing.textBefore(_value.text);
-    //   final String insideText = _value.composing.textInside(_value.text);
-    //   final String afterText = _value.composing.textAfter(_value.text);
-
-    //   if (supportSpecialText) {
-    //     final TextSpan before = widget.specialTextSpanBuilder!
-    //         .build(beforeText, textStyle: widget.style);
-    //     final TextSpan after = widget.specialTextSpanBuilder!
-    //         .build(afterText, textStyle: widget.style);
-
-    //     final List<InlineSpan> children = <InlineSpan>[];
-
-    //     children.add(before);
-
-    //     children.add(TextSpan(
-    //       style: composingStyle,
-    //       text: insideText,
-    //     ));
-
-    //     children.add(after);
-
-    //     return TextSpan(style: widget.style, children: children);
-    //   }
-
-    //   return TextSpan(style: widget.style, children: <TextSpan>[
-    //     TextSpan(text: beforeText),
-    //     TextSpan(
-    //       style: composingStyle,
-    //       text: insideText,
-    //     ),
-    //     TextSpan(text: afterText),
-    //   ]);
-    // }
-
+//     print('------');
+//     if ((_value.composing.isValid) && !widget.readOnly) {
+//       final TextStyle composingStyle = widget.style.merge(
+//         const TextStyle(decoration: TextDecoration.underline),
+//       );
+//       final String beforeText = _value.composing.textBefore(_value.text);
+//       final String insideText = _value.composing.textInside(_value.text);
+//       final String afterText = _value.composing.textAfter(_value.text);
+//       // print('beforeText==>${beforeText}');
+//       // print('insideText==>${insideText}');
+//       // print('afterText==>${afterText}');
+//       //
+//       // print('_value==>${_value.selection}');
+//
+//       if (supportSpecialText) {
+//         final TextSpan before = widget.specialTextSpanBuilder!.build(beforeText, textStyle: widget.style);
+//         final TextSpan inside = widget.specialTextSpanBuilder!.build(insideText, textStyle: widget.style);
+//         final TextSpan after = widget.specialTextSpanBuilder!.build(afterText, textStyle: widget.style);
+//
+//         final List<InlineSpan> children = <InlineSpan>[];
+//
+//         children.add(before);
+//
+//         children.add(inside);
+//
+//         children.add(after);
+// //         _updateSelection(UpdateSelectionIntent( _value,TextSelection.fromPosition(_value.selection.base),
+// //           SelectionChangedCause.keyboard,),);
+//         return TextSpan(style: widget.style, children: children);
+//       }
+//
+//       return TextSpan(style: widget.style, children: <TextSpan>[
+//         TextSpan(text: beforeText),
+//         TextSpan(
+//           style: composingStyle,
+//           text: insideText,
+//         ),
+//         TextSpan(text: afterText),
+//       ]);
+//     }
     //final String text = _value.text;
 
     if (supportSpecialText) {
